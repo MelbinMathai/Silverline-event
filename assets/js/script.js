@@ -24,22 +24,29 @@ const swiper = new Swiper('.swiper-banner', {
 
 /*////// Team Members //////*/
 $('.s-team-list').owlCarousel({
-    loop: false,
+    
     margin:40,
     stagePadding: 110,
     dots:false,
     nav:false,
     mouseDrag: true,
-    autoplay:false,
+    autoplay:true,
     responsive:{
         0:{
-            items:1
+            items:1,
+            loop: true,
+            stagePadding: 15,
         },
         600:{
-            items:2
+            items:2,
         },
-        1000:{
-            items:4
+        992:{
+            items:3
+        },
+        1199:{
+            items:4,
+            loop: false,
+            stagePadding: 110
         }
     }
 });
