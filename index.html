@@ -25,79 +25,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
 
 	<!-- Nav Menu -->
-	<nav class="navbar navbar-expand-lg fixed-top">
+	<nav class="navbar s-nav-top navbar-expand-lg fixed-top">
 	  	<div class="container">
 		    <a class="navbar-brand" href="#">
 		    	<img src="assets/images/logo.svg">
 		    </a>
-		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		      <span class="navbar-toggler-icon"></span>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+		      <i class="fa-solid fa-bars"></i>
 		    </button>
-		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-		      	<ul class="navbar-nav mx-auto gp-15">
-			        <li class="nav-item">
-			          	<a class="nav-link active" aria-current="page" href="#">Home</a>
-			        </li>
-			        <li class="nav-item">
-			          	<a href="#" class="nav-link" href="#">Overview</a>
-			        </li>
-			        <li class="nav-item">
-			          	<a href="#" class="nav-link">Agenda</a>
-			        </li>
-			        <li class="nav-item">
-			          	<a href="#" class="nav-link">Speakers</a>
-			        </li>
-			        <li class="nav-item">
-			          	<a href="#" class="nav-link">Contact</a>
-			        </li>
-		      	</ul>
-		      	<button class="btn btn-outline btn-nav" type="submit">Book your Seat</button>
-		    </div>
+
+	    	<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+		      	<div class="offcanvas-header">
+		        	<a class="navbar-brand" href="#">
+				    	<img src="assets/images/logo.svg">
+				    </a>
+		        	<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		      	</div>
+	      		<div class="offcanvas-body">
+			        <ul class="navbar-nav mx-auto gp-15">
+				        <li class="nav-item">
+				          	<a class="nav-link js-scroll-trigger active" aria-current="page" href="#s-home">Home</a>
+				        </li>
+				        <li class="nav-item">
+				          	<a class="nav-link js-scroll-trigger" href="#s-overview">Overview</a>
+				        </li>
+				        <li class="nav-item">
+				          	<a class="nav-link js-scroll-trigger" href="#s-agenda">Agenda</a>
+				        </li>
+				        <li class="nav-item">
+				          	<a class="nav-link js-scroll-trigger" href="#s-speakers">Speakers</a>
+				        </li>
+				        <li class="nav-item">
+				          	<a class="nav-link js-scroll-trigger" href="#s-partners">Partners</a>
+				        </li>
+				        <li class="nav-item">
+				          	<a class="nav-link js-scroll-trigger" href="#s-contact">Contact</a>
+				        </li>
+			      	</ul>
+			      	<button class="btn btn-outline btn-nav" type="submit">Book your Seat</button>
+	      		</div>
+	    	</div>
 	  	</div>
 	</nav>
 	<!-- Nav Menu End -->
 
 
 	<!-- Banner -->
-	<section class="s-banner">
-		<div class="s-overlay-b"></div>
+	<section class="s-banner" id="s-home">
 		<!-- Banner image Carousel -->
-		<div class="swiper swiper-banner">
-		  	<div class="swiper-wrapper">
-			    <!-- Slides -->
-			    <div class="swiper-slide">
-			    	<div class="s-banner-background">
-			    		<img src="assets/images/banner-1.jpg">
-			    	</div>
-			    </div>
-			    <div class="swiper-slide">
-			    	<div class="s-banner-background">
-			    		<img src="assets/images/banner-2.jpg">
-			    	</div>
-			    </div>
-			    <div class="swiper-slide">
-			    	<div class="s-banner-background">
-			    		<img src="assets/images/banner-3.jpg">
-			    	</div>
-			    </div>
-		  	</div>
-		</div>
+		
 
 		<!-- Banner Text & Countdown -->
 		<div class="s-banner-countdown">
 			<div class="container">
 				<div class="row align-items-center">
-					<div class="s-banner-head">
-						<h1 class="color-change">DIABETES &</h1>
-						<h1 class="font-change">ENDOCRINOLOGY UPDATE 2023</h1>
-						<h3>On 5<sup>th</sup> Nov (Sunday), 2023 at Holiday Inn, Kochi</h3>
+					<div class="col-lg-7">
+						<div class="s-banner-head">
+							<h1>DIABETES &</h1>
+							<h1>ENDOCRINOLOGY UPDATE 2023</h1>
+							<h3>On 5<sup>th</sup> Nov (Sunday), 2023 at Holiday Inn, Kochi</h3>
 
-						<!-- Timer -->
-						<div class="time-remaining mt-5">
-							<div id="timer"></div>
+							<!-- Timer -->
+							<div class="time-remaining mt-5">
+								<div id="timer"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<div class="s-banner-side">
+							<div class="s-banner-sub">
+								<img src="assets/images/banner-sub.png">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -105,49 +106,51 @@
 		</div>
 
 		<!-- Banner Footer SVG -->
-		<div class="banner-footer">
+		<!-- <div class="banner-footer">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
 				<path class="elementor-shape-fill" d="M615.2,96.7C240.2,97.8,0,18.9,0,0v100h1000V0C1000,19.2,989.8,96,615.2,96.7z"></path>
 			</svg>
-		</div>
+		</div> -->
 	</section>
 	<!-- Banner End -->
 
 
 	<!-- Event Overview -->
-	<section class="s-event-overview p-100 pb-0">
+	<section class="s-event-overview p-100 pb-0" id="s-overview">
 		<div class="container-fluid">
-			<!-- Head Text -->
-			<div class="container">
-				<div class="header-text">
-					<h2>Why you should attend</h2>
-					<h2 class="text-change color-change">Scientific Sessions</h2>
+			<div class="row">
+				<!-- Head Text -->
+				<div class="container">
+					<div class="header-text">
+						<h2>Why you should attend</h2>
+						<h2 class="text-change color-change">Scientific Sessions</h2>
+					</div>
 				</div>
-			</div>
 
-			<div class="s-event-all">
-				<div class="row">
-					<div class="col-lg-5 ps-0">
-						<div class="s-event-left">
-							<div class="s-event-image">
-								<img src="assets/images/event-left.jpg">
+				<div class="s-event-all">
+					<div class="row">
+						<div class="col-lg-5 ps-0">
+							<div class="s-event-left">
+								<div class="s-event-image">
+									<img src="assets/images/event-left.jpg">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 pl-0">
+							<div class="s-event-text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-7 pl-0">
-						<div class="s-event-text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</div>
-					</div>
 				</div>
-			</div>
+			</div>	
 		</div>
 	</section>
 	<!-- Event Overview End -->
 
 	<!-- Event Schedules -->
-	<section class="s-event-schedules bg-light p-100">
+	<section class="s-event-schedules bg-light p-100" id="s-agenda">
 		<div class="container">
 			<div class="header-text text-center">
 				<h2 class="color-change">Event</h2>
@@ -587,7 +590,7 @@
 	<!-- Event Schedules End -->
 
 	<!-- Team Members -->
-	<section class="s-team-members p-80">
+	<section class="s-team-members p-80" id="s-speakers">
 		<div class="header-text">
 			<h2 class="color-change">Meet</h2>
 			<h2>the Speakers</h2>
@@ -652,7 +655,7 @@
 	<!-- Team Members End -->
 
 	<!-- Partners -->
-	<section class="s-partners">
+	<section class="s-partners" id="s-partners">
 		<div class="s-partner-head">
 			<div class="header-text mb-0">
 				<h2>Our Partners</h2>
@@ -799,7 +802,7 @@
 
 
 	<!-- Registration Form -->
-	<section class="s-event-registration p-80">
+	<section class="s-event-registration p-80"  id="s-contact">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -811,24 +814,34 @@
 				<div class="col-lg-7">
 					<div class="s-registration">
 						<div class="s-registration-form">
+
+							<div class="s-radio-form mb-3">
+								<div class="form-check form-check-inline">
+								  	<input class="form-check-input" type="radio" name="doctors" id="doctor" checked>
+								  	<label class="form-check-label" for="doctor">I'm a Doctor </label>
+								</div>
+								<div class="form-check form-check-inline">
+								  	<input class="form-check-input" type="radio" name="doctors" id="representative">
+								  	<label class="form-check-label" for="representative">I'm a Medical Representative</label>
+								</div>
+							</div>
 							<div class="company-name mb-3">
 								<div class="company-select">
 									<div class="label"><label>Choose your Company*</label> </div>
 									<select name="sources" id="sources" class="custom-select sources" placeholder="Choose your Company">
-									    <option>NOVO NORDISK INDIA PVT. LTD</option>
-									    <option>SANOFI INDIA LTD</option>
-									    <option>ZYDUS HEALTHCARE LTD</option>
 									    <option>ABBOTT HEALTHCARE PVT. LTD</option>
-									    <option>ABBOTT INDIA LTD</option>
-									    <option>ASTRA ZENECA PHARMA INDIA LTD</option>
-									    <option>FENESTRA PHARMACEUTICALS PVT. LTD</option>
-									    <option>BORIENGER INGELHEIM</option>
-									    <option>USV PVT. LTD</option>
-									    <option>IPCA LABORATORIES</option>
-									    <option>DR REDDEYS LABORATORIES LTD</option>
-									    <option>EMCURE PHARMACEUTICALS</option>
-									    <option>BIOCON BIOLOGICS LTD</option>
-									    <option>ROCHE DIABETICS</option>
+										<option>ABBOTT INDIA LTD</option>
+										<option>ASTRA ZENECA PHARMA INDIA LTD</option>
+										<option>BIOCON BIOLOGICS LTD</option>
+										<option>BORIENGER INGELHEIM</option>
+										<option>DR REDDEYS LABORATORIES LTD</option>
+										<option>EMCURE PHARMACEUTICALS</option>
+										<option>FENESTRA PHARMACEUTICALS PVT. LTD</option>
+										<option>IPCA LABORATORIES</option>
+										<option>ROCHE DIABETICS</option>
+										<option>SANOFI INDIA LTD</option>
+										<option>USV PVT. LTD</option>
+										<option>ZYDUS HEALTHCARE LTD</option>
 									</select>
 								</div>
 							</div>
@@ -844,14 +857,14 @@
 								</div>
 
 								<div class="event-form w-100">
-								    <label for="name" class="form-label">Your Name*</label>
+								    <label for="name" class="form-label">Name*</label>
 								    <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
 								</div>
 							</div>
 
 							<div class="email mb-3">
 								<div class="event-form">
-								    <label for="name" class="form-label">Your Email*</label>
+								    <label for="name" class="form-label">Email*</label>
 								    <input type="email" class="form-control" id="mail" aria-describedby="emailHelp">
 								</div>
 							</div>
@@ -930,26 +943,58 @@
 	<footer class="bg-light p-40">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-lg-5">
+				<div class="col-md-5">
 					<div class="footer-logo">
-						<img src="assets/images/logo.svg">
+						<img src="assets/images/logo-footer.svg">
 					</div>
 				</div>
 
-				<div class="col-lg-7">
-					<div class="footer-social d-flex justify-content-end">
-						<ul class="list-unstyled mb-0 gp-30 d-flex">
+				<div class="col-md-5">
+					<div class="address">
+						<h5>Address</h5>
+						<ul class="list-unstyled">
 							<li>
-								<a href=""><i class="fa-brands fa-facebook-f"></i></a>
+								<i class="fa-solid fa-location-dot"></i>
+								<span>KP Vallon Road, Kadavanthara PO, Kochi - 682020, Kerala, India</span>
 							</li>
 							<li>
-								<a href=""><i class="fa-brands fa-instagram"></i></a>
+								<a href="tel:+919539118118">
+									<i class="fa-solid fa-mobile-button"></i>
+									<span>+91 9539118118 (07 am to 07 pm)</span>
+								</a>
 							</li>
 							<li>
-								<a href=""><i class="fa-brands fa-youtube"></i></a>
+								<a href="tel:+914844147555">
+									<i class="fa-solid fa-phone"></i>
+									<span>0484 4147555</span>
+								</a>
 							</li>
 						</ul>
-						<div class="all-rights ms-5">
+					</div>
+				</div>
+			</div>
+
+			<hr>
+
+			<div class="social-footer">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="footer-social">
+							<ul class="list-unstyled mb-0 gp-30 d-flex">
+								<li>
+									<a href=""><i class="fa-brands fa-facebook-f"></i></a>
+								</li>
+								<li>
+									<a href=""><i class="fa-brands fa-instagram"></i></a>
+								</li>
+								<li>
+									<a href=""><i class="fa-brands fa-youtube"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="all-rights">
 							© 2023 Silverline. All Rights Reserved.
 						</div>
 					</div>
@@ -972,6 +1017,9 @@
 
     <!-- Owl Carousel Plugin -->
     <script src="assets/js/owl.carousel.min.js"></script>
+
+    <!-- Scroll Plugin -->
+    <script src="assets/js/jquery.easing.min.js"></script>
 
     <!-- Custom Scripts -->
     <script src="assets/js/script.js"></script>
