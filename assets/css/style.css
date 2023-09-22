@@ -52,6 +52,7 @@ img {
   font-size: 14px;
   padding: 8px 30px;
   border-radius: 6px;
+  text-transform: uppercase;
   transition: all 0.3s ease;
   border: 1px solid var(--primary-color);
 }
@@ -230,18 +231,14 @@ img {
 .s-event-all:before {
   content: '';
   left: 0;
-  top: 25%;
+  top: 20%;
   width: 100%;
-  height: 75%;
+  height: 80%;
   z-index: -1;
   position: absolute;
   background-color: var(--secondary-color);
   background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
   background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
-  /*background: hsla(152, 100%, 50%, 1);
-  background: linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-  background: -moz-linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-  background: -webkit-linear-gradient(90deg, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);*/
 }
 .s-event-image img {
   height: 600px;
@@ -251,14 +248,15 @@ img {
 }
 .s-event-text {
   line-height: 28px;
-  margin-top: 100px;
+  margin-top: 17px;
   padding: 130px 100px 40px;
 }
 .event_side_menu {
-  padding: 40px 35px 20px 20px;
-  background-color: var(--secondary-color);
+  text-align: right;
   border-top-left-radius: 6px;
+  padding: 40px 35px 20px 20px;
   border-bottom-left-radius: 6px;
+  background-color: var(--secondary-color);
 /*  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);*/
 }
 .event_side_menu .nav-pills .nav-link {
@@ -270,12 +268,17 @@ img {
   font-weight: 600;
   text-transform: uppercase;
 } 
+.event_side_menu h4 {
+  color: #000;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
 .event_side_menu .nav-link p {
   margin-top: 4px;
 }
 .nav-pills .nav-link.active, 
 .nav-pills .show>.nav-link {
-  color: #000;
+  color: #212529;
   background-color: transparent;
 }
 .event_contents {
@@ -333,6 +336,7 @@ img {
   height: 95px;
   object-fit: cover;
   border-radius: 50%;
+  border: 1px solid #e7e7e7;
 }
 .s-event-time {
   padding: 5px 15px;
@@ -412,7 +416,8 @@ img {
 .s-team-members {
   padding-bottom: 100px;
 }
-.s-team-members .header-text {
+.s-team-members .header-text, 
+.s-event-overview .header-text {
   padding-left: 110px;
 }
 .s-partner-head {
@@ -513,6 +518,7 @@ img {
 .s-event-smr ul li {
   color: #96FBE6;
   padding: 8px 0;
+  display: flex;
   position: relative;
 }
 .s-event-smr ul li:before {
@@ -746,6 +752,37 @@ img {
 .all-rights {
   text-align: right;
 }
+.s-event-text h4 {
+  margin-bottom: 15px;
+}
+.event-schdule-tab .nav-tabs .nav-link {
+  color: #000;
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 12px 20px;
+  margin-right: 20px;
+  border: 1px solid #e7e7e7;
+}
+.event-schdule-tab .nav-tabs {
+  border-bottom: none;
+}
+.event-schdule-tab .nav-tabs .nav-item.show .nav-link, 
+.event-schdule-tab .nav-tabs .nav-link.active,
+.event-schdule-tab .nav-tabs .nav-link:hover {
+  color: #fff;
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+}
+.footer-logo p {
+  margin-top: 40px;
+}
+.footer-icon img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+
+
 
 
 
@@ -775,6 +812,17 @@ img {
   }  
   .address {
     padding: 0;
+  }
+  .s-event-text {
+    margin-top: 0;
+    padding: 90px 30px 40px;
+  }
+  .s-event-all:before {
+    top: 12%;
+    height: 88%;
+  }
+  .event-schdule-tab .nav-tabs .nav-link {
+    padding: 12px 8px;
   }
 }
 
@@ -823,7 +871,8 @@ img {
   .event_contents, .s-event-summary {
     margin-top: 30px;
   }
-  .event_side_menu .nav-pills .nav-link {
+  .event_side_menu .nav-pills .nav-link,
+  .event_side_menu {
     text-align: center;
   }
   .s-partners-sm {
@@ -833,6 +882,16 @@ img {
     width: 100%;
     margin-top: 30px;
     text-align: center;
+  }
+  .s-event-overview .header-text {
+    padding-left: 0;
+  }
+  .event-schdule-tab .nav-tabs .nav-link {
+    width: 48%;
+    margin-right: 0;
+  }
+  .event-schdule-tab .nav {
+    gap: 15px;
   }
 }
 
@@ -869,6 +928,9 @@ img {
   .all-rights {
     margin-top: 20px;
     text-align: center;
+  }
+  .owl-carousel .owl-item .team-single img {
+    height: 100%;
   }
 }
 
@@ -908,6 +970,7 @@ img {
     display: block !important;
   }
   .s-rep-prof {
+    margin: 0 auto;
     margin-top: 15px;
   }
   .s-event-all-detail {
@@ -929,5 +992,8 @@ img {
   }
   .s-event-text {
     padding-bottom: 60px;
+  }
+  .event-schdule-tab .nav {
+    gap: 10px;
   }
 }
