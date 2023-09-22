@@ -24,7 +24,6 @@ const swiper = new Swiper('.swiper-banner', {
 
 /*////// Team Members //////*/
 $('.s-team-list').owlCarousel({
-    
     margin:40,
     stagePadding: 110,
     dots:false,
@@ -46,6 +45,7 @@ $('.s-team-list').owlCarousel({
         1199:{
             items:4,
             loop: false,
+            autoplay:false,
             stagePadding: 110
         }
     }
